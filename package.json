@@ -1,10 +1,11 @@
 {
   "name": "@hexlet/code",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "![Actions Status](https://github.com/almax-21/frontend-project-lvl1/workflows/hexlet-check/badge.svg)",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "main": "index.js",
   "scripts": {
