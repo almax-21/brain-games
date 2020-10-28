@@ -8,3 +8,6 @@
 
 ### Playng in brain-even
 [![asciicast](https://asciinema.org/a/LH5mYNrpWrCxUNNPPwQgXhqk3.svg)](https://asciinema.org/a/LH5mYNrpWrCxUNNPPwQgXhqk3)
+
+### Playng in brain-calc
+[![asciicast](https://asciinema.org/a/18Y5gQqXTIk9BF2WsDjUl4VlV.svg)](https://asciinema.org/a/18Y5gQqXTIk9BF2WsDjUl4VlV)
