@@ -16,7 +16,7 @@ const calcExpression = (num1, num2, operator) => {
   } else if (operator === '*') {
     result = num1 * num2;
   }
-  return result.toString();
+  return result;
 };
 
 export const rule = 'What is the result of the expression?';

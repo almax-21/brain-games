@@ -27,7 +27,7 @@ export const launchGame = async (gameRule, gameFunction) => {
     console.log(`Question: ${expression}`);
 
     const userAnswer = await promptly.prompt('Your answer: ');
-    const rightAnswer = result;
+    const rightAnswer = result.toString();
 
     if (userAnswer === rightAnswer) {
       console.log('Correct!');
