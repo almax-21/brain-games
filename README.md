@@ -17,3 +17,6 @@
 
 ### Playng in brain-progression
 [![asciicast](https://asciinema.org/a/ISBUFU21FXQLyExs8C7x0tTZz.svg)](https://asciinema.org/a/ISBUFU21FXQLyExs8C7x0tTZz)
+
+### Playng in brain-prime
+[![asciicast](https://asciinema.org/a/GjViVEXkaXnmPXWBQKrrWqN4m.svg)](https://asciinema.org/a/GjViVEXkaXnmPXWBQKrrWqN4m)
