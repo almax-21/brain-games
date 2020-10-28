@@ -11,3 +11,6 @@
 
 ### Playng in brain-calc
 [![asciicast](https://asciinema.org/a/18Y5gQqXTIk9BF2WsDjUl4VlV.svg)](https://asciinema.org/a/18Y5gQqXTIk9BF2WsDjUl4VlV)
+
+### Playng in brain-gcd
+[![asciicast](https://asciinema.org/a/dRT0AaY1liX74evR3jPKUGkUJ.svg)](https://asciinema.org/a/dRT0AaY1liX74evR3jPKUGkUJ)
