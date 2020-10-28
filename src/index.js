@@ -13,6 +13,11 @@ export const getRandomInt = () => {
   return integer;
 };
 
+export const getRandomDigit = () => {
+  const digit = Math.floor(Math.random() * 10);
+  return digit;
+};
+
 export const check = (predicate, number) => (predicate(number) ? 'yes' : 'no');
 
 export const launchGame = async (gameRule, gameFunction) => {
