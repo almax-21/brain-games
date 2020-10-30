@@ -1,24 +1,25 @@
 import launchGame from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
-const createProgression = () => {
-  const initValue = getRandomInt(100);
-  const step = getRandomInt(10);
-  const coll = [initValue];
+const createProgression = (firstItem, diff, length) => {
+  const result = [];
 
-  for (let i = 1; i <= 9; i += 1) {
-    const prevValue = coll[i - 1];
-    coll[i] = prevValue + step;
+  for (let i = 0; i < length; i += 1) {
+    result[i] = firstItem + diff * i;
   }
 
-  return coll;
+  return result;
 };
 
 const gameRule = 'What number is missing in the progression?';
 
 const getProgressionData = () => {
-  const progression = createProgression();
-  const randomIndex = getRandomInt(progression.length);
+  const firstElement = getRandomInt(100);
+  const difference = getRandomInt(10);
+  const lengthOfProgression = 10;
+  const randomIndex = getRandomInt(lengthOfProgression);
+
+  const progression = createProgression(firstElement, difference, lengthOfProgression);
   const operationResult = progression[randomIndex].toString();
   progression[randomIndex] = '..';
 
