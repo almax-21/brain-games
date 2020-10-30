@@ -1,26 +1,22 @@
 import promptly from 'promptly';
 
-export const greetByName = async () => {
+const launchGame = async (gameRule, getGameData) => {
   console.log('Welcome to the Brain Games!\nMay I have your name?');
-  const name = await promptly.prompt('Your answer: ');
-  console.log(`Hello, ${name}!`);
 
-  return name;
-};
+  const userName = await promptly.prompt('Your answer: ');
 
-export const launchGame = async (gameRule, gameFunction) => {
-  const userName = await greetByName();
+  console.log(`Hello, ${userName}!\n${gameRule}`);
 
-  console.log(gameRule);
+  const numberOfRounds = 3;
 
-  for (let counter = 1; counter <= 3; counter += 1) {
-    const [result, ...gameElements] = gameFunction();
-    const expression = gameElements.join(' ');
+  for (let currRound = 1; currRound <= numberOfRounds; currRound += 1) {
+    const [operationResult, ...operationElements] = getGameData();
+    const questionValue = operationElements.join(' ');
 
-    console.log(`Question: ${expression}`);
+    console.log(`Question: ${questionValue}`);
 
     const userAnswer = await promptly.prompt('Your answer: ');
-    const rightAnswer = result.toString();
+    const rightAnswer = operationResult;
 
     if (userAnswer === rightAnswer) {
       console.log('Correct!');
@@ -32,3 +28,5 @@ export const launchGame = async (gameRule, gameFunction) => {
 
   console.log(`Congratulations, ${userName}!`);
 };
+
+export default launchGame;

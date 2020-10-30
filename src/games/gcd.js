@@ -1,4 +1,4 @@
-import { launchGame } from '../index.js';
+import runEngine from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
 const calcGcd = (num1, num2) => {
@@ -9,14 +9,14 @@ const calcGcd = (num1, num2) => {
   return calcGcd(num2, num1 % num2);
 };
 
-const rule = 'Find the greatest common divisor of given numbers.';
+const gameRule = 'Find the greatest common divisor of given numbers.';
 
-const startGcdGame = () => {
+const getGcdData = () => {
   const number1 = getRandomInt(100);
   const number2 = getRandomInt(100);
-  const result = calcGcd(number1, number2);
+  const operationResult = calcGcd(number1, number2).toString();
 
-  return [result, number1, number2];
+  return [operationResult, number1, number2];
 };
 
-export default () => launchGame(rule, startGcdGame);
+export default () => runEngine(gameRule, getGcdData);

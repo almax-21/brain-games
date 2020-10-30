@@ -1,4 +1,4 @@
-import { launchGame } from '../index.js';
+import launchGame from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
 const isPrime = (num) => {
@@ -15,13 +15,13 @@ const isPrime = (num) => {
   return true;
 };
 
-const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const startPrimeGame = () => {
+const getPrimeData = () => {
   const number = getRandomInt(100);
-  const result = isPrime(number) ? 'yes' : 'no';
+  const operationResult = isPrime(number) ? 'yes' : 'no';
 
-  return [result, number];
+  return [operationResult, number];
 };
 
-export default () => launchGame(rule, startPrimeGame);
+export default () => launchGame(gameRule, getPrimeData);

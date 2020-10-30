@@ -1,4 +1,4 @@
-import { launchGame } from '../index.js';
+import launchGame from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
 const getRandomOperator = () => {
@@ -21,15 +21,15 @@ const calcExpression = (num1, num2, operator) => {
   return result;
 };
 
-const rule = 'What is the result of the expression?';
+const gameRule = 'What is the result of the expression?';
 
-const startCalcGame = () => {
+const getCalcData = () => {
   const operand1 = getRandomInt(100);
   const operand2 = getRandomInt(100);
   const operator = getRandomOperator();
-  const result = calcExpression(operand1, operand2, operator);
+  const operationResult = calcExpression(operand1, operand2, operator).toString();
 
-  return [result, operand1, operator, operand2];
+  return [operationResult, operand1, operator, operand2];
 };
 
-export default () => launchGame(rule, startCalcGame);
+export default () => launchGame(gameRule, getCalcData);
