@@ -8,16 +8,6 @@ export const greetByName = async () => {
   return name;
 };
 
-export const getRandomInt = () => {
-  const integer = Math.floor(Math.random() * 100); // random int from 0 to 99
-  return integer;
-};
-
-export const getRandomDigit = () => {
-  const digit = Math.floor(Math.random() * 10);
-  return digit;
-};
-
 export const launchGame = async (gameRule, gameFunction) => {
   const userName = await greetByName();
 
