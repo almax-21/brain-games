@@ -1,4 +1,4 @@
-import { check, getRandomInt, launchGame } from '../index.js';
+import { getRandomInt, launchGame } from '../index.js';
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -18,7 +18,7 @@ const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const startPrimeGame = () => {
   const number = getRandomInt();
-  const result = check(isPrime, number);
+  const result = isPrime(number) ? 'yes' : 'no';
 
   return [result, number];
 };

@@ -18,8 +18,6 @@ export const getRandomDigit = () => {
   return digit;
 };
 
-export const check = (predicate, number) => (predicate(number) ? 'yes' : 'no');
-
 export const launchGame = async (gameRule, gameFunction) => {
   const userName = await greetByName();
 
