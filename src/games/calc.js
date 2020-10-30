@@ -1,4 +1,4 @@
-import { getRandomInt } from '../index.js';
+import { getRandomInt, launchGame } from '../index.js';
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
@@ -19,9 +19,9 @@ const calcExpression = (num1, num2, operator) => {
   return result;
 };
 
-export const rule = 'What is the result of the expression?';
+const rule = 'What is the result of the expression?';
 
-export const startCalcGame = () => {
+const startCalcGame = () => {
   const operand1 = getRandomInt();
   const operand2 = getRandomInt();
   const operator = getRandomOperator();
@@ -29,3 +29,5 @@ export const startCalcGame = () => {
 
   return [result, operand1, operator, operand2];
 };
+
+export default () => launchGame(rule, startCalcGame);

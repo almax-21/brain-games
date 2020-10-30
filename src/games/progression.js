@@ -1,4 +1,4 @@
-import { getRandomInt, getRandomDigit } from '../index.js';
+import { getRandomInt, getRandomDigit, launchGame } from '../index.js';
 
 const createProgression = () => {
   const initValue = getRandomInt();
@@ -13,9 +13,9 @@ const createProgression = () => {
   return coll;
 };
 
-export const rule = 'What number is missing in the progression?';
+const rule = 'What number is missing in the progression?';
 
-export const startProgressionGame = () => {
+const startProgressionGame = () => {
   const progression = createProgression();
   const randomIndex = Math.floor(Math.random() * progression.length);
   const result = progression[randomIndex];
@@ -23,3 +23,5 @@ export const startProgressionGame = () => {
 
   return [result, ...progression];
 };
+
+export default () => launchGame(rule, startProgressionGame);
