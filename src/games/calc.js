@@ -10,15 +10,16 @@ const getRandomOperator = () => {
 };
 
 const calcExpression = (num1, num2, operator) => {
-  let result;
-  if (operator === '+') {
-    result = num1 + num2;
-  } else if (operator === '-') {
-    result = num1 - num2;
-  } else if (operator === '*') {
-    result = num1 * num2;
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      throw new Error('Unexpected operator');
   }
-  return result;
 };
 
 const gameRule = 'What is the result of the expression?';
