@@ -20,8 +20,9 @@ const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 const getPrimeData = () => {
   const number = getRandomInt(100);
   const operationResult = isPrime(number) ? 'yes' : 'no';
+  const questionValue = number.toString();
 
-  return [operationResult, number];
+  return [operationResult, questionValue];
 };
 
 export default () => launchGame(gameRule, getPrimeData);

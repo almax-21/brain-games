@@ -15,8 +15,9 @@ const getGcdData = () => {
   const number1 = getRandomInt(100);
   const number2 = getRandomInt(100);
   const operationResult = calcGcd(number1, number2).toString();
+  const questionValue = `${number1} ${number2}`;
 
-  return [operationResult, number1, number2];
+  return [operationResult, questionValue];
 };
 
 export default () => runEngine(gameRule, getGcdData);

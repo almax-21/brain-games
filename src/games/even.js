@@ -8,8 +8,9 @@ const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 const getEvenData = () => {
   const number = getRandomInt(100);
   const operationResult = isEven(number) ? 'yes' : 'no';
+  const questionValue = number.toString();
 
-  return [operationResult, number];
+  return [operationResult, questionValue];
 };
 
 export default () => launchGame(gameRule, getEvenData);

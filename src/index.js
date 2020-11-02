@@ -9,9 +9,8 @@ const launchGame = async (gameRule, getGameData) => {
 
   const numberOfRounds = 3;
 
-  for (let currRound = 0; currRound < numberOfRounds; currRound += 1) {
-    const [operationResult, ...operationElements] = getGameData();
-    const questionValue = operationElements.join(' ');
+  for (let currentRound = 0; currentRound < numberOfRounds; currentRound += 1) {
+    const [operationResult, questionValue] = getGameData();
 
     console.log(`Question: ${questionValue}`);
 

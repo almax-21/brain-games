@@ -4,9 +4,8 @@ import getRandomInt from '../getRandomInt.js';
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
   const randomIndex = getRandomInt(operators.length);
-  const operator = operators[randomIndex];
 
-  return operator;
+  return operators[randomIndex];
 };
 
 const calcExpression = (num1, num2, operator) => {
@@ -29,8 +28,9 @@ const getCalcData = () => {
   const operand2 = getRandomInt(100);
   const operator = getRandomOperator();
   const operationResult = calcExpression(operand1, operand2, operator).toString();
+  const questionValue = `${operand1} ${operator} ${operand2}`;
 
-  return [operationResult, operand1, operator, operand2];
+  return [operationResult, questionValue];
 };
 
 export default () => launchGame(gameRule, getCalcData);
