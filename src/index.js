@@ -1,11 +1,13 @@
 import promptly from 'promptly';
 
 const launchGame = async (gameRule, getGameData) => {
-  console.log('Welcome to the Brain Games!\nMay I have your name?');
+  console.log('Welcome to the Brain Games!');
+  console.log('May I have your name?');
 
   const userName = await promptly.prompt('Your answer: ');
 
-  console.log(`Hello, ${userName}!\n${gameRule}`);
+  console.log(`Hello, ${userName}!`);
+  console.log(gameRule);
 
   const numberOfRounds = 3;
 
@@ -20,7 +22,8 @@ const launchGame = async (gameRule, getGameData) => {
     if (userAnswer === rightAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".\nLet's try again, ${userName}!`);
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
+      console.log(`Let's try again, ${userName}!`);
       return;
     }
   }
