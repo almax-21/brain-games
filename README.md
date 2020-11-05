@@ -1,4 +1,4 @@
-#Brain-games
+# Brain-games
 
 **Brain-games** is a set of five console games, built on the principle of popular mobile brain training applications. Each game asks questions that need to be answered correctly. After three correct decisions, the game is considered to be completed. Wrong answers end the game and replay it. Games:
 
