@@ -1,5 +1,7 @@
 import promptly from 'promptly';
 
+const numberOfRounds = 3;
+
 const launchGame = async (gameRule, getGameData) => {
   console.log('Welcome to the Brain Games!');
   console.log('May I have your name?');
@@ -8,8 +10,6 @@ const launchGame = async (gameRule, getGameData) => {
 
   console.log(`Hello, ${userName}!`);
   console.log(gameRule);
-
-  const numberOfRounds = 3;
 
   for (let currentRound = 0; currentRound < numberOfRounds; currentRound += 1) {
     const [operationResult, questionValue] = getGameData();
