@@ -1,5 +1,5 @@
 import launchGame from '../index.js';
-import getRandomInt from '../getRandomInt.js';
+import getRandomFromRange from '../utils.js';
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -18,7 +18,7 @@ const isPrime = (num) => {
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getPrimeData = () => {
-  const number = getRandomInt(100);
+  const number = getRandomFromRange(100);
   const operationResult = isPrime(number) ? 'yes' : 'no';
   const questionValue = number.toString();
 
