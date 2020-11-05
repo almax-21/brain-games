@@ -27,10 +27,10 @@ const getCalcData = () => {
   const operand1 = getRandomFromRange(100);
   const operand2 = getRandomFromRange(100);
   const operator = getRandomOperator();
-  const operationResult = calcExpression(operand1, operand2, operator).toString();
-  const questionValue = `${operand1} ${operator} ${operand2}`;
+  const rightAnswer = calcExpression(operand1, operand2, operator).toString();
+  const question = `${operand1} ${operator} ${operand2}`;
 
-  return [operationResult, questionValue];
+  return [rightAnswer, question];
 };
 
 export default () => launchGame(gameRule, getCalcData);

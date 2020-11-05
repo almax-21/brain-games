@@ -12,12 +12,11 @@ const launchGame = async (gameRule, getGameData) => {
   console.log(gameRule);
 
   for (let currentRound = 0; currentRound < numberOfRounds; currentRound += 1) {
-    const [operationResult, questionValue] = getGameData();
+    const [rightAnswer, question] = getGameData();
 
-    console.log(`Question: ${questionValue}`);
+    console.log(`Question: ${question}`);
 
     const userAnswer = await promptly.prompt('Your answer: ');
-    const rightAnswer = operationResult;
 
     if (userAnswer === rightAnswer) {
       console.log('Correct!');

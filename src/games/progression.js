@@ -20,11 +20,11 @@ const getProgressionData = () => {
   const randomIndex = getRandomFromRange(lengthOfProgression);
 
   const progression = createProgression(firstElement, difference, lengthOfProgression);
-  const operationResult = progression[randomIndex].toString();
+  const rightAnswer = progression[randomIndex].toString();
   progression[randomIndex] = '..';
-  const questionValue = progression.join(' ');
+  const question = progression.join(' ');
 
-  return [operationResult, questionValue];
+  return [rightAnswer, question];
 };
 
 export default () => launchGame(gameRule, getProgressionData);

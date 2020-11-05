@@ -7,10 +7,10 @@ const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getEvenData = () => {
   const number = getRandomFromRange(100);
-  const operationResult = isEven(number) ? 'yes' : 'no';
-  const questionValue = number.toString();
+  const rightAnswer = isEven(number) ? 'yes' : 'no';
+  const question = number.toString();
 
-  return [operationResult, questionValue];
+  return [rightAnswer, question];
 };
 
 export default () => launchGame(gameRule, getEvenData);
