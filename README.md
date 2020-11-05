@@ -1,3 +1,13 @@
+#Brain-games
+
+**Brain-games** is a set of five console games, built on the principle of popular mobile brain training applications. Each game asks questions that need to be answered correctly. After three correct decisions, the game is considered to be completed. Wrong answers end the game and replay it. Games:
+
+- Calculator. Arithmetic expressions to be evaluated.
+- Progression. Find the missing numbers in the sequence of numbers.
+- Definition of an even number.
+- Definition of the greatest common divider.
+- Definition of a prime number.
+
 ### Hexlet tests and linter status:
 ![Actions Status](https://github.com/almax-21/frontend-project-lvl1/workflows/hexlet-check/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f9b6584a3166af696905/maintainability)](https://codeclimate.com/github/almax-21/frontend-project-lvl1/maintainability)
