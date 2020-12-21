@@ -14,6 +14,9 @@
 ### Installation
 ```sh
 $ make install
+$ sudo* npm link
+
+* - optional
 ```
 
 ### Playng in brain-even
